@@ -2,6 +2,7 @@
 
 namespace App\Models{namespace};
 
+use App\Entities{entityNamespace}\{entityNames};
 use CodeIgniter\Model;
 
 class {name} extends Model
@@ -16,7 +17,7 @@ class {name} extends Model
         'Filed1', 'Filed2'
     ];
 
-    protected $returnType    = App\Entities{entityNamespace}\{entityNames}::class;
+    protected $returnType    = {entityNames}::class;
     protected $useTimestamps = true;
 
     protected $dateFormat    = 'datetime';
