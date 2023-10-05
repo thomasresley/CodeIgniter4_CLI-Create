@@ -1,13 +1,26 @@
-<?php namespace App\Models{namespace};
+<?php
+
+namespace App\Models{namespace};
 
 use CodeIgniter\Model;
 
 class {name} extends Model
 {
     protected $table         = '';
+    protected $primaryKey = 'id';
+
+    protected $useAutoIncrement = true;
+    protected $useSoftDeletes = true;
+
     protected $allowedFields = [
         'Filed1', 'Filed2'
     ];
-    protected $returnType    = 'App\Entities{entityNamespace}\{entityNames}';
+
+    protected $returnType    = App\Entities{entityNamespace}\{entityNames}::class;
     protected $useTimestamps = true;
+
+    protected $dateFormat    = 'datetime';
+    protected $createdField  = 'createdAt';
+    protected $updatedField  = 'updatedAt';
+    protected $deletedField  = 'deletedAt';
 }
